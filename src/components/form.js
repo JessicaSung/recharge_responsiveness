@@ -40,7 +40,7 @@ class Form extends Component {
           <input  className='formText' type='text'name='location'/>
           </div>
           </div>
-          </div>
+          
           <div className='divBorder'>
                   <div className="formDiv"> 
           <label className='mar'>Address</label>
@@ -52,6 +52,7 @@ class Form extends Component {
           <div className='formDiv'>
           <label  className='formText mar'>Number of people at location</label>
           <input  className='formText' type='text'name='number'/>
+          </div>
           </div>
           <div className='divBorder'>
           <div className='formDiv'>
