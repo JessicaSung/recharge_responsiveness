@@ -16,9 +16,9 @@ conn = sqlite3.connect('disaster_db.sqlite')
 cur = conn.cursor()
 
 # create party & fetch party # id
-cur.execute('''INSERT INTO Parties (name) \
-            VALUES ( ?, )''',\
-            (person,) )
+cur.execute('INSERT INTO Parties (name) \
+            VALUES ( ?, )',
+            (person, ))
 cur.execute('SELECT id FROM Parties \
             WHERE name = ? ', (person, ))
 gotid = cur.fetchone()
