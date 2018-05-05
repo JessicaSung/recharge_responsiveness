@@ -7,13 +7,42 @@ class Form extends Component {
     return (
       <div>
                 <form>
-                  <div className="formDiv"> 
-          <label>Location</label>
-          <input type='text' placeholder='address, lat, long, etc...'name='location'/>
+                  <div className='divBorder'>
+                  <div className='formDiv'>
+                  <label className='formText'>What is your status?</label>
+                  </div>
+                  <div className='formDiv'>
+                  <input  className='formText' type='radio' name='immediately' value='immediately'/>
+          <label  className='formText'>Need help Immediately</label>
           </div>
           <div className='formDiv'>
-          <label>Number of people at location</label>
-          <input type='text'name='number'/>
+          <input  className='formText' type='radio' name='hours' value='hours'/>
+          <label  className='formText'>Within 1-2 hours</label>
+          </div>       
+                   <div className='formDiv'>
+          <input    className='formText'type='radio' name='days' value='days'/>
+          <label  className='formText'>In the next day or two</label>
+          </div>
+          <div className='formDiv'>
+          <input  className='formText' type='radio' name='good' value='good'/>
+          <label  className='formText'>Do not need assistence at this time</label>
+          </div>
+          </div>
+          <div className='divBorder'>
+                  <div className="formDiv"> 
+          <label className='formText mar'>Name of person entering data</label>
+          <input  className='formText' type='text' name='name'/>
+          </div>
+          </div>
+          <div className='divBorder'>
+                  <div className="formDiv"> 
+          <label className='formText mar'>Address</label>
+          <input  className='formText' type='text'name='location'/>
+          </div>
+          </div>
+          <div className='formDiv'>
+          <label  className='formText mar'>Number of people at location</label>
+          <input  className='formText' type='text'name='number'/>
           </div>
           <div className='formDiv'>
           <label>Do you have elderly/diabled/infants in your party?</label>
@@ -76,7 +105,7 @@ class Form extends Component {
           <label>No</label>
           </div>
           <div className='formDiv'>
-          <label>If you answered no to the above question please give a brief description of your needs</label>
+          <label  className='formText'>If you answered yes to the above question please give a brief description of your needs</label>
           </div>
           <div  className='formDiv'>
           <textarea rows='10' cols='50'></textarea>
@@ -89,7 +118,7 @@ class Form extends Component {
           <label>No</label>
           </div>
           <div className='formDiv'>
-          <label>If you answered no to the above question please give a brief description of your pets</label>
+          <label  className='formText'>If you answered yes to the above question please give a brief description of your pets</label>
           </div>
           <div  className='formDiv'>
           <textarea rows='10' cols='50'></textarea>
@@ -98,10 +127,10 @@ class Form extends Component {
                     <label>Other</label>
           </div>
           <div className='formDiv'>
-          <textarea rows='10' cols='50'></textarea>
+          <textarea  className='formText' rows='10' cols='50'></textarea>
           </div>
-
-          
+                    </div>
+                    <button className='submitButton'type='submit'>Submit</button>
         </form>
       </div>
     );
