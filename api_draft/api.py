@@ -14,26 +14,29 @@ def hello():
 # needs
 # persons
 # resources
-
-@app.route("/needs")
-def list_all_ids():
-    needs = [{
+needs = [{
         'person'  : 'bob',
         'number' : 2
     },
-             {
-                 'person'  : 'alice',
-                 'number' : 3
-                 }];
-    js = json.dumps(needs)
+         {
+             'person'  : 'alice',
+             'number' : 3
+         }];
 
+    
+@app.route("/needs")
+def list_all_ids():
+    js = json.dumps(needs)
     resp = Response(js, status=200, mimetype='application/json')
     return resp
 
 
 @app.route("/needs/<int:need_id>",methods=[ 'GET'])
-def get_need_by_id():
-     return 'Get Need %d' % need_id 
+def get_need_by_id(need_id):
+    individual_need = [x for x in needs if x['number'] == need_id][0]
+    js = json.dumps(individual_need)
+    resp = Response(js, status=200, mimetype='application/json')
+    return resp
 
 @app.route("/needs/<int:need_id>",methods=[ 'POST'])
 def create_need_by_id():
