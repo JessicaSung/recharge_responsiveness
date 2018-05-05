@@ -14,7 +14,7 @@ CREATE TABLE `Parties` (
 `time_logged`	TEXT,
 `location`	TEXT,
 `status`	TEXT,
-`ppl_count`	INTEGER
+`ppl_count`	INTEGER,
 `is_vulnerable`	INTEGER,
 `vuln_description`	TEXT)
 ''')

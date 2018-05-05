@@ -17,14 +17,22 @@ cur = conn.cursor()
 
 # create party & fetch party # id
 cur.execute('INSERT INTO Parties (name) \
-            VALUES ( ?, )',
-            (person, ))
+            VALUES ( ? )', (person, ))
 cur.execute('SELECT id FROM Parties \
             WHERE name = ? ', (person, ))
-gotid = cur.fetchone()
-print(gotid)
-
-# create status: OK or HELP
+gotid = cur.fetchone()[0]
+cur.execute('UPDATE Parties SET time_logged = ? WHERE id = ?',\
+                        (start_timestamp,gotid) )
+cur.execute('UPDATE Parties SET location = ? WHERE id = ?',\
+                        (location,gotid) )
+cur.execute('UPDATE Parties SET status = ? WHERE id = ?',\
+                        (status,gotid) )
+cur.execute('UPDATE Parties SET ppl_count = ? WHERE id = ?',\
+                        (ppl_count,gotid) )
+cur.execute('UPDATE Parties SET is_vulnerable = ? WHERE id = ?',\
+                        (is_vulnerable,gotid) )
+conn.commit()
+cur.close()
 
 # create need with timestamp
 # cur.execute('''INSERT INTO Needs (colname) \
