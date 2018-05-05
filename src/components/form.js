@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 
 import './App.css';
 
-class App extends Component {
+class Form extends Component {
   render() {
     return (
       <div>
                 <form>
                   <div className="formDiv"> 
           <label>Location</label>
-          <input type='text' name='location'/>
+          <input type='text' placeholder='address, lat, long, etc...'name='location'/>
           </div>
           <div className='formDiv'>
           <label>Number of people at location</label>
@@ -24,7 +24,9 @@ class App extends Component {
           </div>
           <div className='formDiv'>
           <label>If you answered yes to the above question please give a brief description of the party members</label>
-          <textarea className='formDiv'></textarea>
+          </div>
+          <div  className='formDiv'>
+          <textarea rows='10' cols='50'></textarea>
           </div>
           <div className='formDiv'>
           <label>Are there any injured parties?</label>
@@ -35,7 +37,9 @@ class App extends Component {
           </div>
           <div className='formDiv'>
           <label>If there are injured parties please give a brief description of the injuries</label>
-          <textarea className='formDiv'></textarea>
+          </div>
+          <div  className='formDiv'>
+          <textarea rows='10' cols='50'></textarea>
           </div>
           <div className='formDiv'>
           <label>Does anyone need medication?</label>
@@ -46,7 +50,9 @@ class App extends Component {
           </div>
           <div className='formDiv'>
           <label>If anyone needs medication please give a brief description of the medication needed</label>
-          <textarea className='formDiv'></textarea>
+          </div>
+          <div className='formDiv'>
+          <textarea rows='10' cols='50'></textarea>
           </div>
 <div className='formDiv'>
           <label>Do you have power?</label>
@@ -68,8 +74,12 @@ class App extends Component {
           <label>Yes</label>
           <input type='radio' name='noFood' value='No'/>
           <label>No</label>
+          </div>
+          <div className='formDiv'>
           <label>If you answered no to the above question please give a brief description of your needs</label>
-          <textarea className='formDiv'></textarea>
+          </div>
+          <div  className='formDiv'>
+          <textarea rows='10' cols='50'></textarea>
           </div>
           <div className='formDiv'>
           <label>Do you have any pets with you?</label>
@@ -80,7 +90,15 @@ class App extends Component {
           </div>
           <div className='formDiv'>
           <label>If you answered no to the above question please give a brief description of your pets</label>
-          <textarea className='formDiv'></textarea>
+          </div>
+          <div  className='formDiv'>
+          <textarea rows='10' cols='50'></textarea>
+          </div>
+          <div className='formDiv'> 
+                    <label>Other</label>
+          </div>
+          <div className='formDiv'>
+          <textarea rows='10' cols='50'></textarea>
           </div>
 
           
@@ -90,4 +108,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Form;
