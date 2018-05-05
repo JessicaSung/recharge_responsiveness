@@ -12,11 +12,11 @@ class Form extends Component {
                   </div>
                   <div className='formDiv'>
                   <input  className='formText' type='radio' name='immediately' value='immediately'/>
-          <label  className='formText'>Immediately</label>
+          <label  className='formText'>Need help Immediately</label>
           </div>
           <div className='formDiv'>
           <input  className='formText' type='radio' name='hours' value='hours'/>
-          <label  className='formText'>1-2 hours</label>
+          <label  className='formText'>Within 1-2 hours</label>
           </div>       
                    <div className='formDiv'>
           <input    className='formText'type='radio' name='days' value='days'/>
@@ -29,13 +29,19 @@ class Form extends Component {
           </div>
           <div className='divBorder'>
                   <div className="formDiv"> 
-          <label className='formText'>Location</label>
-          <input  className='formText' type='text' placeholder='address, lat, long, etc...'name='location'/>
+          <label className='formText mar'>Name of person entering data</label>
+          <input  className='formText' type='text' name='name'/>
+          </div>
+          </div>
+          <div className='divBorder'>
+                  <div className="formDiv"> 
+          <label className='formText mar'>Address</label>
+          <input  className='formText' type='text'name='location'/>
           </div>
           </div>
           <div className='divBorder'>
           <div className='formDiv'>
-          <label  className='formText'>Number of people at location</label>
+          <label  className='formText mar'>Number of people at location</label>
           <input  className='formText' type='text'name='number'/>
           </div>
           </div>
@@ -111,7 +117,7 @@ class Form extends Component {
           <label  className='formText'>No</label>
           </div>
           <div className='formDiv'>
-          <label  className='formText'>If you answered no to the above question please give a brief description of your needs</label>
+          <label  className='formText'>If you answered yes to the above question please give a brief description of your needs</label>
           </div>
           <div  className='formDiv'>
           <textarea   className='formText'rows='10' cols='50'></textarea>
@@ -126,7 +132,7 @@ class Form extends Component {
           <label  className='formText'>No</label>
           </div>         
           <div className='formDiv'>
-          <label  className='formText'>If you answered no to the above question please give a brief description of your pets</label>
+          <label  className='formText'>If you answered yes to the above question please give a brief description of your pets</label>
           </div>
           <div  className='formDiv'>
           <textarea   className='formText'rows='10' cols='50'></textarea>
@@ -139,8 +145,8 @@ class Form extends Component {
           <div className='formDiv'>
           <textarea  className='formText' rows='10' cols='50'></textarea>
           </div>
-          </div>
-
+                    </div>
+                    <button className='submitButton'type='submit'>Submit</button>
           
         </form>
       </div>
