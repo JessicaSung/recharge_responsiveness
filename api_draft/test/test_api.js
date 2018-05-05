@@ -44,5 +44,21 @@ describe('API_TEST_GET_NEEDS', function() {
 		    )
 	});
     })
+    describe('/POST need', () => {
+	it('POST a need by id', (done) => {
+            chai.request('http://localhost:5000')
+		.post('/needs/4')
+		.send({
+		    'person': 'carol',
+		    'number': '4',
+		})
+		.end((err, res) => {
+		    expect(err).to.be.null;
+		    expect(res).to.have.status(200);
+		    done();
+		}
+		    )
+	});
+    })
 });
 

@@ -38,7 +38,10 @@ def get_need_by_id(need_id):
     resp = Response(js, status=200, mimetype='application/json')
     return resp
 
+# This should take the json, turn it into a python object,
+# then add it to the needs object in memory
 @app.route("/needs/<int:need_id>",methods=[ 'POST'])
-def create_need_by_id():
+def create_need_by_id(need_id):
+    
      return 'Create Need %d' % need_id 
  
