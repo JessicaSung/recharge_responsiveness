@@ -19,7 +19,9 @@ Finally, to start the service on port 5000:
 To prepare to run the tests, install some node packages:
 
 > npm install mocha
+
 > npm install chai
+
 > npm install chai-http
 
 To run the tests, from the commandline in the directory
