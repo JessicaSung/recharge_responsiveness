@@ -16,7 +16,6 @@ var expect = chai.expect;
 
 
 describe('API_TEST_GET_NEEDS', function() {
-
     describe('/GET needs', () => {
       it('it should GET all the needs', (done) => {
         chai.request('http://localhost:5000')
@@ -24,6 +23,10 @@ describe('API_TEST_GET_NEEDS', function() {
               .end((err, res) => {
 		  expect(err).to.be.null;
 		  expect(res).to.have.status(200);
+		  expect(res.body).to.be.an('array').that.deep.includes({
+        'person'  : 'bob',
+        'number' : 2
+    });
 		  console.log(res);
 		  done();
 	      }

@@ -1,4 +1,7 @@
 from flask import Flask
+from flask import Response
+import json
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -14,7 +17,18 @@ def hello():
 
 @app.route("/needs")
 def list_all_ids():
-    return "List all Needs!"
+    needs = [{
+        'person'  : 'bob',
+        'number' : 2
+    },
+             {
+                 'person'  : 'alice',
+                 'number' : 3
+                 }];
+    js = json.dumps(needs)
+
+    resp = Response(js, status=200, mimetype='application/json')
+    return resp
 
 
 @app.route("/needs/<int:need_id>",methods=[ 'GET'])
