@@ -9,29 +9,36 @@ class Form extends Component {
                 <form>
                   <div className='divBorder'>
                   <div className='formDiv'>
-                  <label>What is your status?</label>
+                  <label className='formText'>What is your status?</label>
                   </div>
                   <div className='formDiv'>
-                  <input  type='radio' name='immediately' value='immediately'/>
-          <label>Need help Immediately</label>
+                  <input  className='formText' type='radio' name='immediately' value='immediately'/>
+          <label  className='formText'>Need help Immediately</label>
           </div>
           <div className='formDiv'>
-          <input type='radio' name='hours' value='hours'/>
-          <label>Within 1-2 hours</label>
+          <input  className='formText' type='radio' name='hours' value='hours'/>
+          <label  className='formText'>Within 1-2 hours</label>
           </div>       
                    <div className='formDiv'>
-          <input type='radio' name='days' value='days'/>
-          <label>In the next day or two</label>
+          <input    className='formText'type='radio' name='days' value='days'/>
+          <label  className='formText'>In the next day or two</label>
           </div>
           <div className='formDiv'>
-          <input type='radio' name='good' value='good'/>
-          <label>Do not need assistence at this time</label>
+          <input  className='formText' type='radio' name='good' value='good'/>
+          <label  className='formText'>Do not need assistence at this time</label>
           </div>
           </div>
           <div className='divBorder'>
                   <div className="formDiv"> 
-          <label className=' mar'>Name of person entering data</label>
-          <input  type='text' name='name'/>
+          <label className='formText mar'>Name of person entering data</label>
+          <input  className='formText' type='text' name='name'/>
+          </div>
+          </div>
+          <div className='divBorder'>
+                  <div className="formDiv"> 
+          <label className='formText mar'>Address</label>
+          <input  className='formText' type='text'name='location'/>
+          </div>
           </div>
           </div>
           <div className='divBorder'>
@@ -43,9 +50,8 @@ class Form extends Component {
 
           <div className='divBorder'>
           <div className='formDiv'>
-          <label  className=' mar'>Number of people at location</label>
-          <input   type='text'name='number'/>
-          </div>
+          <label  className='formText mar'>Number of people at location</label>
+          <input  className='formText' type='text'name='number'/>
           </div>
           <div className='divBorder'>
           <div className='formDiv'>
@@ -96,38 +102,38 @@ class Form extends Component {
           <textarea rows='10' cols='50'></textarea>
           </div>
           </div>
-          <div className='divBorder'>
-<div className='formDiv'>
+<div className='divBorder'>
+     <div className='formDiv'>
           <label>Do you have power?</label>
           <input type='radio' name='yesPower' value='Yes'/>
           <label>Yes</label>
           <input type='radio' name='noPower' value='No'/>
           <label>No</label>
-          </div>
-          </div>
-          <div className='divBorder'>
-          <div className='formDiv'>
+      </div>
+</div>
+<div className='divBorder'>
+    <div className='formDiv'>
           <label>Do you have heat/air conditioning?</label>
           <input type='radio' name='yesHeat' value='Yes'/>
           <label>Yes</label>
           <input type='radio' name='noHeat' value='No'/>
           <label>No</label>
-          </div>
-          </div>
-          <div className='divBorder'>
-          <div className='formDiv'>
+    </div>
+</div>
+<div className='divBorder'>
+    <div className='formDiv'>
           <label>Do you have food and water?</label>
           <input type='radio' name='yesFood' value='Yes'/>
           <label>Yes</label>
           <input type='radio' name='noFood' value='No'/>
           <label>No</label>
-          </div>
-          </div>
-          <div className='divBorder'>
-          <div className='formDiv'>
-          <label  >If you answered yes to the above question please give a brief description of your needs</label>
-          </div>          
-                              <div  className='formDiv'>
+    </div>
+</div>
+<div className='divBorder'>
+      <div className='formDiv'>
+          <label className='formText' >If you answered yes to the above question please give a brief description of your needs</label>
+      </div>             
+      <div  className='formDiv'>
           <textarea rows='10' cols='50'></textarea>
           </div>
           </div>
@@ -138,9 +144,9 @@ class Form extends Component {
           <label>Yes</label>
           <input type='radio' name='noPets' value='No'/>
           <label>No</label>
-          </div>
-          <div className='formDiv'>
-          <label >If you answered yes to the above question please give a brief description of your pets</label>
+       </div>
+<div className='formDiv'>
+          <label  className='formText'>If you answered yes to the above question please give a brief description of your pets</label>
           </div>
           <div  className='formDiv'>
           <textarea rows='10' cols='50'></textarea>
@@ -151,11 +157,11 @@ class Form extends Component {
                     <label>Other</label>
           </div>
           <div className='formDiv'>
-          <textarea  rows='10' cols='50'></textarea>
+
+          <textarea  className='formText' rows='10' cols='50'></textarea>
           </div>
                     </div>
                     <button className='submitButton'type='submit'>Submit</button>
-          
         </form>
       </div>
     );

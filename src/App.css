@@ -1,5 +1,5 @@
 .formDiv{display:block; text-align:center; margin-top: 20px}
-.formText{}
-.divBorder{border: 2px solid black}
+.divBorder{border: solid black 2px; margin-bottom:10px}
+.formText{vertical-align:50%}
+.submitButton{margin-right:auto; margin-left:auto; display:block; width:120px; height:40px}
 .mar{margin-right:10px}
-.submitButton{width:150px; height:50px; margin-left:auto;margin-right:auto; display:block; font-size:20px; margin-top:10px}
