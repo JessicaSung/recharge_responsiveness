@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Jumbotron, Grid, Row, Col } from "react-bootstrap";
+import { Grid, Row, Col } from "react-bootstrap";
 import ReactDOM from "react-dom";
 import './MapContainer.css';
 

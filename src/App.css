@@ -3,3 +3,13 @@
 /* .formText{vertical-align:50%} */
 .submitButton{margin-right:auto; margin-left:auto; display:block; width:120px; height:40px}
 .mar{margin-right:10px}
+.footer {  
+    margin-top: 1.5rem;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    /* width: 100%; */
+    background-color: blue;
+    color: white;
+    text-align: center;
+}

@@ -3,6 +3,7 @@ import { GoogleApiWrapper } from 'google-maps-react';
 import Form from './components/form'
 import MapContainer from './components/MapContainer';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import './App.css';
 
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
         <Header />
         <MapContainer google={this.props.google} />
         <Form />
+        <Footer />
       </div>
     );
   }
