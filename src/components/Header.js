@@ -9,7 +9,7 @@ class Header extends Component {
             <Grid>
                 <Jumbotron>
                     <h1 className='headerH1'>Mark Me Safe</h1>
-                    <p>This is a website for creating a network of disaster survivors for first responders, so in an disaster, relief effort responders can know the status, needs and location of survivors. Responders can also connect survivors with good samaritans who have listed free aid (water, food, clothes) in a survivor's area.</p>
+                    <p>This site creates a network of disaster survivors to provide first responders with the status, needs, and location of survivors. Responders can connect survivors with good samaritans who have listed free aid (food, water, clothes) in a survivor's area.</p>
                 </Jumbotron>
             </Grid>
         )
