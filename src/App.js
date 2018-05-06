@@ -74,7 +74,7 @@ class App extends Component {
                 <Form {...props} submitForm={this.submitForm} />
               )} />
               <Route path='/responders' render={(props) => (
-                <Responders {...props} userInfo={this.state.usrInfo} />
+                <Responders {...props} userInfo={this.state.userInfo} />
               )} />
             </Switch>
           <Footer /> 
