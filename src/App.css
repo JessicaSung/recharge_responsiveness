@@ -15,8 +15,9 @@
 }
 .title{text-align:center; font-size:60px}
 .navBar{background-color:green}
-.navBarButton{width:100px; height:40px}
+.navBarButton{width:100px; height:40px; margin:5px}
 .info{font-size:30px; text-align:center}
 .map{margin-right:auto; margin-left:auto; display:block}
 .mapsize{margin-top:20px; width:75%; height:auto;}
+.floatButton{float:right}
 
