@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import { GoogleApiWrapper } from 'google-maps-react'; 
 import Form from './components/form'
-import MapContainer from './components/MapContainer';
 import axios from 'axios'
 import { Route, Link, Switch } from 'react-router-dom'
-import Home from './components/home'
+import Home from './components/Home'
 import Responders from './components/Responders'
 
+import { GoogleApiWrapper } from 'google-maps-react';
+import MapContainer from './components/MapContainer';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './App.css';
+
+import NavBar from './components/NavBar'
 
 class App extends Component {
   constructor(){
@@ -59,16 +61,13 @@ console.log(userInfo)
       <div>
       {/*Al's map*/}
         <Header />
+        <NavBar />
+        {/*child component*/}
         <MapContainer google={this.props.google} />
-        <Form />
         <Footer />
       {/*end Al's map*/}
-         <h1 className='title'>Mark Me Safe</h1>
-        <div className='navBar'>
-        <button className='navBarButton'><Link to='/form'>Info Form</Link></button>
-        <button><Link to='/'>Home</Link></button>
-        <button><Link to='/responders'>First Responders</Link></button>
-        </div>
+  
+        
 <Switch>
   <Route path='/'exact render={(props)=>(
     <Home {...props}/>
@@ -88,3 +87,5 @@ console.log(userInfo)
 export default GoogleApiWrapper({
   apiKey: 'AIzaSyCWbu-9LE059vntLLU_S60zwn77qOEf8oY',
 })(App)
+
+
