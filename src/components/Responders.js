@@ -20,7 +20,7 @@ export default class Responders extends Component {
     render() {
         return (
             <div>
-                <img className='map mapsize' src='./images/frMap.jpg'/>
+               
                 <ButtonToolbar>
                     <Button onClick={()=>this.handleFilterList("yes", "food")}>Food/Water</Button>
                     <Button>Heat/AC</Button>

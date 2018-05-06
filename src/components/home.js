@@ -4,7 +4,7 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                Map will be move to here.
+                <img className='map mapsize'src='./images/hospitals.png'/>
             </div>
         )
     }
