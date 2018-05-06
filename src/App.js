@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import './App.css';
-import Form from './components/form'
 import { GoogleApiWrapper } from 'google-maps-react'; 
+import Form from './components/form'
 import MapContainer from './components/MapContainer';
 import axios from 'axios'
 import { Route, Link, Switch } from 'react-router-dom'
 import Home from './components/home'
 import Responders from './components/Responders'
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+import './App.css';
 
 class App extends Component {
   constructor(){
@@ -55,9 +58,10 @@ console.log(userInfo)
     return (
       <div>
       {/*Al's map*/}
-        <h1> First Response Person Finder </h1>
+        <Header />
         <MapContainer google={this.props.google} />
         <Form />
+        <Footer />
       {/*end Al's map*/}
          <h1 className='title'>Mark Me Safe</h1>
         <div className='navBar'>

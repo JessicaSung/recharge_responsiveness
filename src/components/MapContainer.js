@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Grid, Row, Col } from "react-bootstrap";
 import ReactDOM from "react-dom";
 import './MapContainer.css';
 
@@ -137,7 +138,7 @@ export default class MapContainer extends Component {
         {},
         {
           center: { lat: 30.2672, lng: -97.7431 },
-          zoom: 11,
+          zoom: 13,
           mapTypeId: "roadmap"
         }
       );
@@ -173,16 +174,21 @@ export default class MapContainer extends Component {
 
   render() {
     const style = {
-      // MUST specify dimensions of the Google map or it will not work. Also works best when style is specified inside the render function and created as an object
-      width: "90vw", // 90vw basically means take up 90% of the width screen. px also works.
-      height: "75vh" // 75vh similarly will take up roughly 75% of the height of the screen. px also works.
+      width: "75vw",
+      height: "75vh"
     };
 
     return (
-      // in our return function you must return a div with ref='map' and style.
-      <div ref="map" style={style}>
-        loading map...
-      </div>
+      <Grid>
+        <Row>
+          <Col xs={12}>
+          <div ref="map" style={style}>
+            loading map...
+          </div>
+          </Col>
+      </Row>
+      </Grid>
+
     );
   }
 }
