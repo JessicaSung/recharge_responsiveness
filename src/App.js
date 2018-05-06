@@ -23,7 +23,7 @@ class App extends Component {
   // componentDidMount(){
   //   axios.get('http://localhost:5000/userInfo')
   //   .then(res => {
-  //     this.setState({ classrooms: res.data })
+  //     this.setState({ userInfo: res.data })
   //   })
   //   .catch((error) => {
   //     console.log(error)
@@ -31,6 +31,7 @@ class App extends Component {
   // }
   
   submitForm=(e)=>{
+    console.log('function accessed')
 e.preventDefault()
 let name=e.target.name.value
 let address=e.target.address.value
@@ -77,7 +78,7 @@ console.log(userInfo)
   )} />
 <Route path='/responders' render={(props)=>(
   <Responders {...props} userInfo={this.state.usrInfo}/>
-)}/>
+)}/> 
 </Switch>
       </div>
     );

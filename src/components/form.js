@@ -5,7 +5,7 @@ class Form extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={()=>this.props.submitForm()}>
+        <form onSubmit={(e)=>this.props.submitForm(e)}>
           <div className='divBorder'>
             <div className='formDiv'>
               <label className='formText'>What is your status?</label>
@@ -169,7 +169,7 @@ class Form extends Component {
               <label>Other</label>
             </div>
             <div className='formDiv'>
-              <textarea className='formText' rows='10' cols='50'></textarea>
+              <textarea name='other'className='formText' rows='10' cols='50'></textarea>
             </div>
           </div>
           <button className='submitButton' type='submit'>Submit</button>
