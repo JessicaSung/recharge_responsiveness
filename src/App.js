@@ -14,10 +14,10 @@ import './App.css';
 import NavBar from './components/NavBar'
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super()
-    this.state={
-      userInfo:[]
+    this.state = {
+      userInfo: []
     }
   }
   // componentDidMount(){
@@ -29,55 +29,64 @@ class App extends Component {
   //     console.log(error)
   //   })
   // }
-  
-  submitForm=(e)=>{
-    console.log('function accessed')
-    e.preventDefault()
-    let name=e.target.name.value
-    let address=e.target.address.value
-    let meds=e.target.Meds.value
-    let medComment=e.target.medComment.value
-    let power=e.target.Power.value
-    let powComment=e.target.powerComment.value
-    let pets=e.target.Pets.value
-    let petComment=e.target.petComment.value
-    let food=e.target.Food.value
-    let foodComment=e.target.foodComment.value
-    let injured=e.target.Injured.value
-    let injComment=e.target.injComment.value
-    let number=e.target.number.value
-    let status=e.target.status.value
-    let heat=e.target.Heat.value
-    let heatComment=e.target.heatComment.value
-    let disabled=e.target.Disabled.value
-    let disComment=e.target.disComment.value
-    let other=e.target.other.value
-    let userInfo={name:name, address:address, meds:meds, medsComment:medComment,power:power, powerComment:powComment,pets:pets, petComment:petComment, food:food, foodComment:foodComment,
-    injured:injured, injComment:injComment, number:number, status:status, heat:heat, heatComment:heatComment, disabled:disabled, disComment:disComment, other:other}
-    //axios.post('http://localhost:5000/userInfo', userInfo)
-    console.log(userInfo)
-  }
 
+  submitForm = (e) => {
+    e.preventDefault()       
+    let pos=navigator.geolocation.getCurrentPosition(function (position) {
+      if(position.coords.latitude && position.coords.longitude){
+      let loc={lat:position.coords.latitude, long:position.coords.longitude} 
+      return loc     
+            }
+    });
+
+    let name = e.target.name.value
+    let address = e.target.address.value
+    let meds = e.target.Meds.value
+    let medComment = e.target.medComment.value
+    let power = e.target.Power.value
+    let powComment = e.target.powerComment.value
+    let pets = e.target.Pets.value
+    let petComment = e.target.petComment.value
+    let food = e.target.Food.value
+    let foodComment = e.target.foodComment.value
+    let injured = e.target.Injured.value
+    let injComment = e.target.injComment.value
+    let number = e.target.number.value
+    let status = e.target.status.value
+    let heat = e.target.Heat.value
+    let heatComment = e.target.heatComment.value
+    let disabled = e.target.Disabled.value
+    let disComment = e.target.disComment.value
+    let other = e.target.other.value
+    let userInfo = {
+      name: name, address: address, meds: meds, medsComment: medComment, power: power, powerComment: powComment, pets: pets, petComment: petComment, food: food, foodComment: foodComment,
+      injured: injured, injComment: injComment, number: number, status: status, heat: heat, heatComment: heatComment, disabled: disabled, disComment: disComment, other: other
+    }
+    //axios.post('http://localhost:5000/userInfo', userInfo)
+   
+    
+  }
+  
   render() {
     return (
       <div>
-        
-          <Header />
-          <NavBar />
-          <MapContainer google={this.props.google} />
-          {/*child component*/}
-            <Switch>
-              <Route path='/' exact render={(props) => (
-                <Home {...props} />
-              )} />
-              <Route path='/form' render={(props) => (
-                <Form {...props} submitForm={this.submitForm} />
-              )} />
-              <Route path='/responders' render={(props) => (
-                <Responders {...props} userInfo={this.state.userInfo} />
-              )} />
-            </Switch>
-          <Footer /> 
+
+        <Header />
+        <NavBar />
+
+        {/*child component*/}
+        <Switch>
+          <Route path='/' exact render={(props) => (
+            <MapContainer google={this.props.google} {...props} />
+          )} />
+          <Route path='/form' render={(props) => (
+            <Form {...props} submitForm={this.submitForm} />
+          )} />
+          <Route path='/responders' render={(props) => (
+            <Responders {...props} userInfo={this.state.userInfo} />
+          )} />
+        </Switch>
+        <Footer />
       </div>
     );
   }

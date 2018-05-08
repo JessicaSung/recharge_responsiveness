@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Button, ButtonToolbar } from 'react-bootstrap';
+import { GoogleApiWrapper } from 'google-maps-react';
+import MapContainer from './MapContainer';
 // import { Route, Link, Switch } from 'react-router-dom';
 
-export default class Responders extends Component {
+ class Responders extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,7 +22,7 @@ export default class Responders extends Component {
     render() {
         return (
             <div>
-               
+               <MapContainer google={this.props.google} />
                 <ButtonToolbar>
                     <Button onClick={()=>this.handleFilterList("yes", "food")}>Food/Water</Button>
                     <Button>Heat/AC</Button>
@@ -33,3 +35,6 @@ export default class Responders extends Component {
         );
     }
 }
+export default GoogleApiWrapper({
+    apiKey: 'AIzaSyCWbu-9LE059vntLLU_S60zwn77qOEf8oY',
+  })(Responders)
