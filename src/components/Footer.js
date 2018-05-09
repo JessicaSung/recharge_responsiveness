@@ -5,7 +5,7 @@ class Footer extends Component {
     render () {
         return (
             <div>
-               <p class="footer">Copyright © All rights reserved. 2018 <br/> Made By <a href="https://github.com/JessicaSung/recharge_responsiveness">MakerFaire Hackers</a></p>
+                <p class="footer">Copyright © 2018 Mark Me Safe. All rights reserved. <br/> Created by <a href="https://github.com/JessicaSung/recharge_responsiveness">MakerFaire Hackers</a>.</p>
             </div>
         )
     }
