@@ -1,1 +1,23 @@
 .formDiv{display:block; text-align:center; margin-top: 20px}
+.divBorder{border: solid black 2px; margin-bottom:10px}
+.formText{vertical-align:50%}
+.submitButton{margin-right:auto; margin-left:auto; display:block; width:120px; height:40px}
+.mar{margin-right:10px}
+.footer {  
+    margin-top: 1.5rem;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    /* width: 100%; */
+    background-color: #101010;
+    color: white;
+    text-align: center;
+}
+.title{text-align:center; font-size:60px}
+.navBar{background-color:green}
+.navBarButton{width:100px; height:40px; margin:5px}
+.info{font-size:30px; text-align:center}
+.map{margin-right:auto; margin-left:auto; display:block}
+.mapsize{margin-top:20px; width:75%; height:auto;}
+.floatButton{float:right}
+
