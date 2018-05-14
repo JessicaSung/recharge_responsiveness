@@ -179,7 +179,7 @@ export default class MapContainer extends Component {
     };
 
     return (
-      <Grid>
+      <Grid className='mapCenter'>
         <Row>
           <Col xs={12}>
           <div ref="map" style={style}>
