@@ -31,14 +31,11 @@ class App extends Component {
   // }
 
   submitForm = (e) => {
-    e.preventDefault()       
-    let pos=navigator.geolocation.getCurrentPosition(function (position) {
-      if(position.coords.latitude && position.coords.longitude){
-      let loc={lat:position.coords.latitude, long:position.coords.longitude} 
-      return loc     
-            }
-    });
-
+    e.preventDefault()
+    e.persist()
+    console.log(e.target.name)
+    navigator.geolocation.getCurrentPosition( (position)=> {         
+    let loc={lat:position.coords.latitude, long:position.coords.longitude}
     let name = e.target.name.value
     let address = e.target.address.value
     let meds = e.target.Meds.value
@@ -59,11 +56,13 @@ class App extends Component {
     let disComment = e.target.disComment.value
     let other = e.target.other.value
     let userInfo = {
-      name: name, address: address, meds: meds, medsComment: medComment, power: power, powerComment: powComment, pets: pets, petComment: petComment, food: food, foodComment: foodComment,
+      location:loc, name: name, address: address, meds: meds, medsComment: medComment, power: power, powerComment: powComment, pets: pets, petComment: petComment, food: food, foodComment: foodComment,
       injured: injured, injComment: injComment, number: number, status: status, heat: heat, heatComment: heatComment, disabled: disabled, disComment: disComment, other: other
     }
+    console.log(userInfo)
     //axios.post('http://localhost:5000/userInfo', userInfo)
-   
+  })
+  
     
   }
   
